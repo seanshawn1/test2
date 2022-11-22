@@ -17,4 +17,4 @@ services:
       options:
         awslogs-region: ap-northeast-1
         awslogs-group: /ecs/archi-inspection/api
-        tag: "{{.ImageName}}.{{.Name}}.{{.FullID}}"
+        awslogs-stream-prefix: ecs
