@@ -1,0 +1,8 @@
+Django>=3.0,<4.0
+djangorestframework
+django-webpack-loader
+django-cors-headers
+dataclasses
+PyYAML==5.3.*
+uritemplate==3.0.*
+sphinx
