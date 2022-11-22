@@ -3,7 +3,9 @@ version: '3'
 services:
   web:
     container_name: django
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: 
       python3 manage.py runserver 0.0.0.0:4000
     volumes:
