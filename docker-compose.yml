@@ -12,3 +12,9 @@ services:
       - ./django:/code
     ports:
       - "4000:4000"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-northeast-1
+        awslogs-group: /ecs/archi-inspection/api
+        tag: "{{.ImageName}}.{{.Name}}.{{.FullID}}"
