@@ -25,6 +25,32 @@ SECRET_KEY = 'django-insecure-gt=m20fw!6-a4g8lovfc9z_4*o-4bqhwjg#eq+l(uuw8l=tfn7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Add Logging setting
+LOGGING = {
+   'version': 1,
+   'disable_existing_loggers': False,
+   'formatters': {
+       'verbose': {
+           'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+       },
+   },
+   'handlers': {
+       'console': {
+           'level': 'INFO',
+           'class': 'logging.StreamHandler',
+           'stream': sys.stdout,
+           'formatter': 'verbose'
+       },
+   },
+   'loggers': {
+       '': {
+           'handlers': ['console'],
+           'level': 'INFO',
+           'propagate': True,
+       },
+   },
+}
+
 ALLOWED_HOSTS = ['10.0.1.114']
 
 
