@@ -7,11 +7,11 @@ services:
       context: .
       dockerfile: Dockerfile
     command: 
-      python3 manage.py runserver 0.0.0.0:4000
+      python3 manage.py runserver 0.0.0.0:8080
     volumes:
       - ./django:/code
     ports:
-      - "4000:4000"
+      - "8080:8080"
     logging:
       driver: awslogs
       options:
